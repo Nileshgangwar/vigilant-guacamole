@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookPad.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff44599250.js" crossorigin="anonymous"></script>
+    <Script>src="https://code.jquery.com/jquery-3.6.0.js"</Script>
+</head>
+<body>
+    <!-- navbar start -->
+    <nav>        
+        <div class="menu-icon"><span class="fas fa-bars"></span></div>
+        <div class="logo"> BookPad <span>.</span></div>
+        <div class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Padcasts</a></li>
+        </div>
+        <div class="search-icon"><span class="fas fa-search"></span></div>
+        <div class="cancel-icon"><span class="fas fa-times"></span></div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="Search..." required>
+            <!-- <button type="submit" class="fas fa-search"></button> -->
+        </form>
+        <script>
+            const menuBtn = document.querySelector(".menu-icon span");
+            const searchBtn = document.querySelector(".search-icon");
+            const cancelBtn = document.querySelector(".cancel-icon");
+            const items = document.querySelector(".nav-items");
+            const form = document.querySelector("form");
+            menuBtn.onclick = () =>{
+                items.classList.add("active");
+                menuBtn.classList.add("hide");
+                searchBtn.classList.add("hide");
+                cancelBtn.classList.add("show");
+            }
+            cancelBtn.onclick = () =>{
+                items.classList.remove("active");
+                menuBtn.classList.remove("hide");
+                searchBtn.classList.remove("hide");
+                cancelBtn.classList.remove("show");
+                cancelBtn.style.color = "#ff3d00";
+                form.classList.remove("active");
+            }
+            searchBtn.onclick = () =>{
+                form.classList.add("active");
+                searchBtn.classList.add("hide");
+                cancelBtn.classList.add("show");
+            }
+
+        </script>
+        
+    </nav>
+    <!-- navbar End -->
+    <!-- Home section start -->
+    <div class="home">
+        <div class="box1">
+            <h1>Home of <span>100,000+</span> <br> books and podcasts</h1>       
+        </div>
+        <div class="box2">
+            <p>Get the lates books and listen to the <br> lates padcasts all in one place </p>
+        </div>
+    </div>
+        <div class="btn">
+            <button class="My-butten">Get Started</button>
+        </div>
+
+    
+    <!-- Home section End -->
+    <!-- images section start  -->
+    
+    <div class="box3">
+       
+    </div>
+    <div class="box4">
+        <h3>LOREM IPSUM</h3>
+        <h1>Lorem Ipsum <br> dolor sit amet.</h1>
+        <div class="container1">
+            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing  elit.  Aliquid atque consequatur <br> molestias animi officiis sed, voluptatibus et.</p>
+           
+        </div>
+       
+    </div>
+    <div class="social-menu">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+   
+    
+    
+   
+    <!-- images section end -->
+    <!-- footer section start  -->
+    <div class="featured-writer">
+        <h2>Featured Writers</h2>
+        <div class="img">
+            <div class="img1">
+                <img src="images/E R Braithwaite.jpg" alt="">
+                <p>E R Braithwaite</p>
+            </div>    
+            <div class="img2">
+                <img src="images/Andrea Levy.jpg" alt="">
+                <p>Andrea Levy</p>
+            </div>    
+            <div class="img3">
+                <img src="images/Stephen King.jpg" alt="">
+                <p>Stephen King</p>
+            </div>    
+            <div class="img4">
+                <img src="images/Jorge Amado.jpg" alt="">
+                <p>Jorge Amado</p>
+            </div>    
+            <div class="img5">
+                <img src="images/Gayle Forman.jpg" alt="">
+                <p>Gayle Forman</p>
+            </div>    
+            <div class="img6">
+                <img src="images/Shashi tharoor.jpg" alt="">
+                <p>Shashi tharoor</p>
+            </div>    
+            <div class="img7">
+                <img src="images/J.K Rowling.jpg" alt="">
+                <p>J.K Rowling</p>
+            </div>    
+            <div class="img8">
+                <img src="images/John Green.jpg" alt="">
+                <p>John Green</p>
+            </div>    
+        </div>
+        
+    </div>
+      <script>
+          $('nav ul li.btn span').click(function(){
+              $('nav ul div.items').toggleClass("show");
+              $('nav ul li.btn span').toggleClass("show");
+          });
+      </script>
+</body>
+</html>
